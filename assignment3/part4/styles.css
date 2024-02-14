@@ -51,8 +51,19 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1px;
   }
 
   .feature {
       width: 200px;
+  }
+
+  article {
+    flex: 1;
+  }
+
+  aside {
+    flex: 1;
   }
