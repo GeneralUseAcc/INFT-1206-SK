@@ -59,7 +59,7 @@ h2 {
 p {
   font-size: 1rem;
   line-height: 1.7;
-
+}
 
 a:hover, a:focus {
   text-decoration: none;
@@ -67,5 +67,5 @@ a:hover, a:focus {
 }
 
 a:visited {
-  color: #a69066;
+  color: #66a68a;
 }
