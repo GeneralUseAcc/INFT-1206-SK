@@ -67,5 +67,13 @@ a:hover, a:focus {
 }
 
 a:visited {
-  color: #66a68a;
+  color: #a69066;
+}
+
+a:focus {
+  outline: none;
+}
+
+section ul {
+  line-height: 1.7;
 }
