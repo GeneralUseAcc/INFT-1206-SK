@@ -74,6 +74,10 @@ a:focus {
   outline: none;
 }
 
-section ul {
+ul, ol {
+
+}
+
+li {
   line-height: 1.7;
 }
