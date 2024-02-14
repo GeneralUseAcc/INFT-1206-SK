@@ -18,9 +18,10 @@ div {
   vertical-align: middle;
   font-size: 18px;
   background-color: red;
-  border: 1px;
+  border: solid;
   border-color: rgb(125, 0, 0);
   border-radius: 20px;
   /* background-image: linear-gradient(to right bottom); */
   box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 0x 0px 5px rgba(255, 255, 255, 0.5);
 }
