@@ -47,4 +47,25 @@ header, footer {
 
 h1 {
   font-size: 3rem;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: purple;
+}
+
+a:visited {
+  color: #a69066;
 }
