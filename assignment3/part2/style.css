@@ -14,7 +14,7 @@ div {
   justify-content: center;
   text-align: center;
   color: white;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
   vertical-align: middle;
   font-size: 18px;
   background-color: red;
@@ -22,8 +22,9 @@ div {
   border-color: rgb(125, 0, 0);
   border-radius: 20px;
   /* background-image: linear-gradient(to right bottom); */
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-  box-shadow: 0x 0px 5px rgb(255, 255, 255) inset;
-}
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.551), 
+    5px 5px 5px rgba(0,0,0,0.5),
+    inset -10px -10px 20px -5px  rgba(0, 0, 0, 0.25);
+
 
 /* Search for applying inset box shadows */
