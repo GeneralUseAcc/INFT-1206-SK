@@ -3,11 +3,16 @@ body {
     color: #333;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+    display: inline-block
   }
 
   img {
       max-width: 100%;
-      display: block;
+      display: inline-block;
+  }
+
+  img body {
+    display: inline-block;
   }
   
   .logo {
