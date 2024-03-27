@@ -17,7 +17,7 @@ function randomValueFromArray(array){
 storyText = ("It was 94 fahrenheit outside, so " + insertX + 
 " went for a walk. When they got to " + insertY + 
 ", they stared in horror for a few moments, then" + insertZ + 
-". Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.")
+". Bob saw the whole thing, but was not surprised — " + insertX + " weighs 300 pounds, and it was a hot day.")
 
 const insertX = ["Willy the Goblin" , "Big Daddy" , "Father Christmas"]
 const insertY = ["the soup kitchen" , "Disneyland" , "the White House"]
