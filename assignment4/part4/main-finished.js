@@ -205,4 +205,7 @@ function evilLoop() {
 }
 
 // TODO: Make the evil circle exist - 3
+
+evilCircle();
+
 // TODO: Add counter to count how many balls are on screen (and how many have been removed)
