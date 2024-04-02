@@ -1,11 +1,18 @@
-// alert("Running Test")
-// console.log("Console Log Test")
+alert("Running Test")
+console.log("Console Log Test")
 
 
 // Variables and Definitions
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
+var newStory = storyText;
+var xItem = randomValueFromArray(insertX);
+var yItem = randomValueFromArray(insertY);
+var zItem = randomValueFromArray(insertZ);
+var name = "Bob";
+var weight = Math.round(300) + " pounds";
+var temperature = Math.round(94) + " fahrenheit";
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
@@ -14,10 +21,10 @@ function randomValueFromArray(array){
 
 // Text Strings
 
-storyText = ("It was 94 fahrenheit outside, so " + insertX + 
-" went for a walk. When they got to " + insertY + 
-", they stared in horror for a few moments, then" + insertZ + 
-". Bob saw the whole thing, but was not surprised — " + insertX + " weighs 300 pounds, and it was a hot day.")
+storyText = ("It was " + temperature + " outside, so " + xItem + 
+" went for a walk. When they got to " + yItem + 
+", they stared in horror for a few moments, then" + zItem + 
+". " + name +  " saw the whole thing, but was not surprised — " + xItem + " weighs " + weight + ", and it was a hot day.")
 
 const insertX = ["Willy the Goblin" , "Big Daddy" , "Father Christmas"]
 const insertY = ["the soup kitchen" , "Disneyland" , "the White House"]
@@ -30,16 +37,14 @@ randomize.addEventListener('click', result);
 function result() {
 
   if(customName.value !== '') {
-    const name = customName.value;
-
+    name = customName.value;
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
-
+    weight = Math.round(300/14) + " stone";
+    temperature =  Math.round((94-32)*(5/9)) + " centigrade";
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
