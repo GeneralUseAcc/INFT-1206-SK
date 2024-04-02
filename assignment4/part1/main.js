@@ -29,7 +29,8 @@ randomize.addEventListener('click', result);
 
 function result() {
   let newStory = storyText;
-  
+  console.log("Does the result work?");
+
   let xItem = randomValueFromArray(insertX);
   let yItem = randomValueFromArray(insertY);
   let zItem = randomValueFromArray(insertZ);
