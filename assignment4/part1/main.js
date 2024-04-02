@@ -6,13 +6,6 @@ console.log("Console Log Test")
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
-var newStory = storyText;
-var xItem = randomValueFromArray(insertX);
-var yItem = randomValueFromArray(insertY);
-var zItem = randomValueFromArray(insertZ);
-var name = "Bob";
-var weight = Math.round(300) + " pounds";
-var temperature = Math.round(94) + " fahrenheit";
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
@@ -21,7 +14,7 @@ function randomValueFromArray(array){
 
 // Text Strings
 
-storyText = ("It was " + temperature + " outside, so " + xItem + 
+let storyText = ("It was " + temperature + " outside, so " + xItem + 
 " went for a walk. When they got to " + yItem + 
 ", they stared in horror for a few moments, then" + zItem + 
 ". " + name +  " saw the whole thing, but was not surprised — " + xItem + " weighs " + weight + ", and it was a hot day.")
@@ -35,6 +28,11 @@ const insertZ = ["spontaneously combusted" , "melted into a puddle on the sidewa
 randomize.addEventListener('click', result);
 
 function result() {
+  let newStory = storyText;
+  let xItem = randomValueFromArray(insertX);
+  let yItem = randomValueFromArray(insertY);
+  let zItem = randomValueFromArray(insertZ);
+  let name = "Bob";
 
   if(customName.value !== '') {
     name = customName.value;
