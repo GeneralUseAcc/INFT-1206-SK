@@ -143,6 +143,9 @@ class EvilCircle extends Shape{
 
         if (distance < this.size + ball.size) {
           // TODO: change the existence of the ball - 1
+          ball.exists = false;
+          count--;
+          para.textContext = 'Ball count: ' + count;
 
         }
       }
@@ -172,6 +175,7 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+// TODO: modify loop function for evilCircle - 2 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
@@ -182,30 +186,22 @@ function loop() {
     ball.collisionDetect();
   }
 
-
+  evilBall.draw();
+  evilBall.checkBounds();
+  evilBall.collisionDetect();
 
   requestAnimationFrame(loop);
 }
 
+const evilBall = new EvilCircle(random(0, width), random(0, height));
+
 loop();
 
-let evilCircle = new evilCircle(
-  random(0, width),
-  random(0, height),
-);
 
-// TODO: modify evil loop function for evilCircle - 2 
-evilCircle.setControls();
-function evilLoop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
-  ctx.fillRect(0, 0, width, height);
-
-  requestAnimationFrame(evilLoop);
-  
-}
 
 // TODO: Make the evil circle exist - 3
+// TODO: Double-check collision detection for evilCircle
+// TODO: Fix evilCircle's movement
 
-evilCircle();
 
 // TODO: Add counter to count how many balls are on screen (and how many have been removed)
