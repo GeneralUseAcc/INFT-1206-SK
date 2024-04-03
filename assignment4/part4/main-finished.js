@@ -72,13 +72,14 @@ class Ball extends Shape{
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-
+  
         if (distance < this.size + ball.size) {
           ball.color = this.color = randomRGB();
         }
       }
     }
   }
+  
 }
 
 class EvilCircle extends Shape{
@@ -86,9 +87,6 @@ class EvilCircle extends Shape{
     super(x, y, 20, 20);
     this.color = 'white';
     this.size = 10;
-  }
-
-  setControls() {
     window.addEventListener("keydown", (e) => {
       switch (e.key) {
         case "a":
