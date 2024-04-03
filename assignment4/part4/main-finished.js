@@ -1,5 +1,8 @@
 // set up canvas
 
+const para = document.querySelector('p');
+let count = 0;
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -123,11 +126,11 @@ class EvilCircle extends Shape{
     }
 
     if ((this.y + this.size) >= height) {
-      this.Y -= this.size;
+      this.y -= this.size;
     }
 
     if ((this.y - this.size) <= 0) {
-      this.Y += this.size;
+      this.y += this.size;
     }
 
   }
@@ -140,11 +143,9 @@ class EvilCircle extends Shape{
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-          // TODO: change the existence of the ball - 1
           ball.exists = false;
           count--;
-          para.textContext = 'Ball count: ' + count;
-
+          para.textContent = 'Ball count: ' + count;
         }
       }
     }
@@ -169,8 +170,9 @@ while (balls.length < 25) {
     randomRGB(),
     size
   );
-
   balls.push(ball);
+  count++;
+  // para.textContent = 'Ball Count: ' + count;
 }
 
 // TODO: modify loop function for evilCircle - 2 
@@ -196,10 +198,7 @@ const evilBall = new EvilCircle(random(0, width), random(0, height));
 loop();
 
 
-
-// TODO: Make the evil circle exist - 3
 // TODO: Double-check collision detection for evilCircle
-// TODO: Fix evilCircle's movement
 
 
 // TODO: Add counter to count how many balls are on screen (and how many have been removed)
