@@ -90,6 +90,7 @@ class EvilCircle extends Shape{
     super(x, y, 20, 20);
     this.color = 'white';
     this.size = 10;
+    
     window.addEventListener("keydown", (e) => {
       switch (e.key) {
         case "a":
@@ -172,10 +173,13 @@ while (balls.length < 25) {
   );
   balls.push(ball);
   count++;
-  // para.textContent = 'Ball Count: ' + count;
+  para.textContent = 'Ball Count: ' + count;
 }
 
 // TODO: modify loop function for evilCircle - 2 
+
+const evilBall = new EvilCircle(random(0, width), random(0, height));
+
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
@@ -185,17 +189,24 @@ function loop() {
     ball.update();
     ball.collisionDetect();
   }
+  
+  requestAnimationFrame(loop);
+}
+loop();
+
+
+function evilLoop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
   evilBall.draw();
   evilBall.checkBounds();
   evilBall.collisionDetect();
 
-  requestAnimationFrame(loop);
+  requestAnimationFrame(evilLoop);
 }
+evilLoop()
 
-const evilBall = new EvilCircle(random(0, width), random(0, height));
-
-loop();
 
 
 // TODO: Double-check collision detection for evilCircle
